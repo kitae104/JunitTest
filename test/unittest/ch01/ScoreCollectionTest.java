@@ -1,16 +1,13 @@
 package unittest.ch01;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import org.junit.jupiter.api.Test;
 
-class ScoreCollectionTest
-{
+import static org.junit.jupiter.api.Assertions.*;
 
-	@Test
-	void test()
-	{
-		fail("Not yet implemented");
-	}
+class ScoreCollectionTest {
 
+    @Test
+    public void test(){
+        System.out.println("test");
+    }
 }

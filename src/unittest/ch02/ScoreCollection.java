@@ -1,4 +1,4 @@
-package unittest.ch01;
+package unittest.ch02;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,8 +11,8 @@ public class ScoreCollection
 		scores.add(scoreable);
 	}
 	
-	public int arithmeticMean() {							// 산술 평균 계산
-		int total = scores.stream().mapToInt(Scoreable::getScore).sum();
+	public int arithmeticMean() {
+		int total = scores.stream().mapToInt(Scoreable::getScore).sum();	//
 		return total / scores.size();
 	}
 }
