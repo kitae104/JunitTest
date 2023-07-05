@@ -7,10 +7,10 @@ import java.util.Map;
  */
 public class Criterion {
     public Answer getAnswer() {
-
+        return null;
     }
 
     public Map.Entry<Object, Object> getWeight() {
-
+        return null;
     }
 }

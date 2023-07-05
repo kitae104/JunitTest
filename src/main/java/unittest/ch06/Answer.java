@@ -5,10 +5,10 @@ package unittest.ch06;
  */
 public class Answer {
     public String getQuestionText() {
-
+        return null;
     }
 
     public boolean match(Answer answer) {
-
+        return false;
     }
 }

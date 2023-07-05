@@ -25,22 +25,22 @@ public class Profile {
 
         boolean kill = false;
         boolean anyMatches = false;
-        for (Criterion criterion: criteria) {
-            // 해당 기준이 프로파일에 있는 답변과 맞는지 결정
-            Answer answer = answers.get(
-                    criterion.getAnswer().getQuestionText());
-            boolean match =
-                    criterion.getWeight() == Weight.DontCare ||
-                            answer.match(criterion.getAnswer());
-
-            if (!match && criterion.getWeight() == Weight.MustMatch) {
-                kill = true;
-            }
-            if (match) {
-                score += criterion.getWeight().getValue();
-            }
-            anyMatches |= match;
-        }
+//        for (Criterion criterion: criteria) {
+//            // 해당 기준이 프로파일에 있는 답변과 맞는지 결정
+//            Answer answer = answers.get(
+//                    criterion.getAnswer().getQuestionText());
+//            boolean match =
+//                    criterion.getWeight() == Weight.DontCare ||
+//                            answer.match(criterion.getAnswer());
+//
+//            if (!match && criterion.getWeight() == Weight.MustMatch) {
+//                kill = true;
+//            }
+//            if (match) {
+//                score += criterion.getWeight().getValue();
+//            }
+//            anyMatches |= match;
+//        }
         if (kill)
             return false;
         return anyMatches;
