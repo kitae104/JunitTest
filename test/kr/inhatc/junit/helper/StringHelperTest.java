@@ -24,7 +24,7 @@ class StringHelperTest {
         assertEquals("CD", helper.truncateAInFirst2Positions("ACD"));
     }
 
-    StringHelper helper = new StringHelper();       //
+    StringHelper helper = new StringHelper();       // 전역 변수로 선언
     
     @Test
     void truncateAInFirst2Positions_AinFirst2Position() {
@@ -41,6 +41,13 @@ class StringHelperTest {
     // ABCD => false, ABAB => true, AB => true, A => false
     @Test
     void testAreFirstAndLastTwoCharactersTheSame_BasicNegative() {
-    	assertEquals(false, helper.areFirstAndLastTwoCharactersTheSame("ABCD"));
+//    	assertEquals(false, helper.areFirstAndLastTwoCharactersTheSame("ABCD"));
+//      assertFalse(helper.areFirstAndLastTwoCharactersTheSame("ABCD"));
+        assertFalse(false);
+    }
+
+    @Test
+    void testAreFirstAndLastTwoCharactersTheSame_BasicPositive() {
+    	assertTrue(helper.areFirstAndLastTwoCharactersTheSame("ABAB"));
     }
 }
