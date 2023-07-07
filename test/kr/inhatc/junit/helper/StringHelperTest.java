@@ -12,19 +12,35 @@ class StringHelperTest {
         assertEquals("ABC", "ABC");    // expected, actual
     }
 
+    // AACD => CD, ACD => CD, CDEF=>CDEF, CDAA => CDAA
     @Test
     void truncateAInFirst2Positions() {
         StringHelper helper = new StringHelper();
         String actual = helper.truncateAInFirst2Positions("AACD");
         String expected = "CD";
 
-        // AACD => CD, ACD => CD, CDEF=>CDEF, CDAA => CDAA
         assertEquals(expected, actual);
         assertEquals("CD", helper.truncateAInFirst2Positions("AACD"));
         assertEquals("CD", helper.truncateAInFirst2Positions("ACD"));
     }
 
+    StringHelper helper = new StringHelper();       //
+    
     @Test
-    void areFirstAndLastTwoCharactersTheSame() {
+    void truncateAInFirst2Positions_AinFirst2Position() {
+        assertEquals("CD", helper.truncateAInFirst2Positions("AACD"));
+        assertEquals("CD", helper.truncateAInFirst2Positions("ACD"));
+    }
+
+    @Test
+    void truncateAInFirst2Positions_AinFirstPosition() {
+        assertEquals("CD", helper.truncateAInFirst2Positions("ACD"));
+    }
+    
+    
+    // ABCD => false, ABAB => true, AB => true, A => false
+    @Test
+    void testAreFirstAndLastTwoCharactersTheSame_BasicNegative() {
+    	assertEquals(false, helper.areFirstAndLastTwoCharactersTheSame("ABCD"));
     }
 }
