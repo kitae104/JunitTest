@@ -15,7 +15,7 @@ public class ArraysCompareTest {
     // Arrays.sort
 
     @Test
-    @DisplayName("배열 정렬 테스트")
+    //@DisplayName("배열 정렬 테스트")
     public void testArraySort_RandomArray() {
         int[] numbers = {12, 3, 4, 1};
         int[] expected = {1, 3, 4, 12};
@@ -26,7 +26,7 @@ public class ArraysCompareTest {
     }
 
     @Test
-    @DisplayName("NullPointerException 테스트")
+    //@DisplayName("NullPointerException 테스트")
     public void testArraySort_NullArray() {
         int[] numbers = null;
         try {
@@ -38,7 +38,7 @@ public class ArraysCompareTest {
     }
 
     @Test //(expected = NullPointerException.class)        // expected를 사용한 예외 처리 -> Junit5에서 불가 !!
-    @DisplayName("NullPointerException 테스트2")
+    //@DisplayName("NullPointerException 테스트2")
     public void testArraySort_NullArray2() {
         int[] numbers = null;
         assertThrows(NullPointerException.class, () -> Arrays.sort(numbers));
@@ -46,7 +46,7 @@ public class ArraysCompareTest {
 
     @Test
     @Timeout(value = 100, unit = TimeUnit.MILLISECONDS)      // 100ms 이내에 수행되어야 함
-    @DisplayName("배열 비교 테스트")
+    //@DisplayName("배열 비교 테스트")
     public void testSort_Performance() {
         int[] array = {12, 23, 4, 5, 20, 2};
 

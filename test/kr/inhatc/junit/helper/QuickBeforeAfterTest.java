@@ -6,7 +6,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class QuickBeforeAfterTest {
 
-    @BeforeAll   // 이전에는 @BeforeClass를 사용했지만 JUnit5에서는 @BeforeAll를 사용
+    @BeforeAll
+    // 이전에는 @BeforeClass를 사용했지만 JUnit5에서는 @BeforeAll를 사용
     public static void beforeClass(){           // 반드시 static으로 선언
         System.out.println("Before class");
     }
