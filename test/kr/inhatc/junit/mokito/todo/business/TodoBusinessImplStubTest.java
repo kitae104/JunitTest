@@ -9,16 +9,15 @@ import org.junit.jupiter.api.Test;
 import kr.inhatc.junit.mokito.todo.data.api.TodoService;
 import kr.inhatc.junit.mokito.todo.data.api.TodoServiceStub;
 
-class TodoBusinessImplStubTest {
+public class TodoBusinessImplStubTest {
 
 	@Test
 	void testUsingAStub() {
 		TodoService todoServiceStub = new TodoServiceStub();
 		TodoBusinessImpl todoBusinessImpl = new TodoBusinessImpl(todoServiceStub);
-		
 		List<String> filteredTodos = todoBusinessImpl.retrieveTodosRelatedToSpring("Dummy");
-		
 		assertEquals(2,  filteredTodos.size());
 	}
+
 
 }
