@@ -25,7 +25,21 @@ public class TodoBusinessImpl {
 				filteredTodos.add(todo);
 			}
 		}
-		
 		return filteredTodos;
+	}
+
+	/**
+	 * Spring 문자열이 포함되지 않은 것만 삭제하는 메소드
+	 * @param user
+	 */
+	public void deleteTodosNotRelatedToSpring(String user) {
+		List<String> filteredTodos = new ArrayList<String>();
+		List<String> todos = todoService.retrieveTodos(user);
+
+		for (String todo : todos) {
+			if(!todo.contains("Spring")) {			// Spring이 포함되지 않은 것만 삭제
+				todoService.deleteTodo(todo);
+			}
+		}
 	}
 }
