@@ -1,17 +1,19 @@
 package kr.inhatc.junit.mokito.todo.business;
 
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
-import org.mockito.ArgumentMatchers;
-import org.mockito.Mockito;
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.mockito.ArgumentMatchers.anyInt;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 import java.util.List;
 
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.ArgumentMatchers.anyInt;
-import static org.mockito.Mockito.when;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
+
 
 public class ListTest {
 
@@ -19,7 +21,7 @@ public class ListTest {
     @DisplayName("리스트 테스트")
     public void testMockListSizeMethod(){
         // Given - setup
-        List listMock = Mockito.mock(List.class);
+        List listMock = mock(List.class);
         when(listMock.size()).thenReturn(2);
 
         // When - actual method call
@@ -31,7 +33,7 @@ public class ListTest {
     @Test
     @DisplayName("여러값 반환 테스트")
     public void testMockListSize_ReturnMultipleValues(){
-        List listMock = Mockito.mock(List.class);
+        List listMock = mock(List.class);
         when(listMock.size()).thenReturn(2).thenReturn(3);  // 2, 3 순서대로 반환
 
         assertEquals(2, listMock.size());
