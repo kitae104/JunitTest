@@ -5,6 +5,9 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.*;
+import org.mockito.junit.MockitoJUnit;
+import org.mockito.junit.MockitoRule;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 
 import java.util.Arrays;
@@ -25,6 +28,8 @@ import static org.mockito.Mockito.*;
 @ExtendWith(MockitoExtension.class)
 public class TodoBusinessImplMockitoInjectMocksTest {
 
+//	@Rule  --> JUnit4 에서 사용 --> JUnit5에서는 @ExtendWith로 사용
+//	public MockitoRule mockitoRule = MockitoJUnit.rule();
 
 	@Mock
 	TodoService todoServiceMock;
