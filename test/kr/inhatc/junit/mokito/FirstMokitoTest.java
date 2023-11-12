@@ -6,9 +6,9 @@ import org.junit.jupiter.api.Test;
 
 class FirstMokitoTest {
 
-	@Test
-	public void test() {
-		assertTrue(true);
-	}
-
+    @Test
+    public void test() {
+        System.out.println("FirstMokitoTest");
+        assertTrue(true);
+    }
 }
