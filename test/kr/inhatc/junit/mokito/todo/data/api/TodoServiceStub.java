@@ -9,8 +9,8 @@ import java.util.List;
  * 서비스가 변경될 때마다 매번 같이 변경해서 테스트를 수행해야 하는 버거로움이 있음.<br />
  */
 public class TodoServiceStub implements TodoService {
-	// Dynamic Condition
-	// Service Definition
+	// Dynamic Condition : 메소드가 호출될 때마다 다른 결과를 리턴하도록 구현
+	// Service Definition : 메소드가 호출될 때마다 동일한 결과를 리턴하도록 구현
 	
 	@Override
 	public List<String> retrieveTodos(String user) {

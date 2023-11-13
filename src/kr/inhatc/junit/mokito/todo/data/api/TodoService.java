@@ -6,7 +6,7 @@ import java.util.List;
 // 2. TodoServiceStub을 사용하여 TodoBusinessImpl 테스트하기
 public interface TodoService {
 	public List<String> retrieveTodos(String user);
-	
+
 	public List<String> configureSomething(String user);
 
 	/**

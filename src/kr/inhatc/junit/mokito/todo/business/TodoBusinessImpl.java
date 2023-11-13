@@ -11,11 +11,12 @@ public class TodoBusinessImpl {
 
 	private TodoService todoService;
 
+	// 생성자를 통한 의존성 주입
 	public TodoBusinessImpl(TodoService todoService) {
 		super();
 		this.todoService = todoService;
 	}
-	
+
 	public List<String> retrieveTodosRelatedToSpring(String user) {
 		List<String> filteredTodos = new ArrayList<String>();
 		List<String> todos = todoService.retrieveTodos(user);
