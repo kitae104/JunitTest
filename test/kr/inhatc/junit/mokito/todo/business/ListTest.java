@@ -44,7 +44,8 @@ public class ListTest {
     @DisplayName("리스트 Get 테스트")
     public void testMockListGet(){
         List listMock = Mockito.mock(List.class);
-        // Argument Matcher
+
+        // Argument Matcher - 인자값이 어떤 정수든 test 반환
         when(listMock.get(anyInt())).thenReturn("test"); // 인자값이 어떤 정수든 test 반환
 
         assertEquals("test", listMock.get(0));  // 0번째 인덱스에 test가 있는지 확인
