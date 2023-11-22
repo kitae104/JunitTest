@@ -52,11 +52,11 @@ public class TodoBusinessImplMockTest {
 		// Given
 		TodoService todoServiceMock = mock(TodoService.class);	// mockito를 이용한 테스트
 
-		List<String> todos = Arrays.asList("Learn Spring MVC", "Learn Spring", "Learn to Dance");
+		List<String> todos = Arrays.asList("Learn Spring MVC", "Learn Spring", "Learn to Dance"); // data
 
-		given(todoServiceMock.retrieveTodos("Dummy")).willReturn(todos);
+		given(todoServiceMock.retrieveTodos("Dummy")).willReturn(todos); // Stub
 
-		TodoBusinessImpl todoBusinessImpl = new TodoBusinessImpl(todoServiceMock);
+		TodoBusinessImpl todoBusinessImpl = new TodoBusinessImpl(todoServiceMock); // SUT
 
 		// When
 		List<String> filteredTodos = todoBusinessImpl.retrieveTodosRelatedToSpring("Dummy");
