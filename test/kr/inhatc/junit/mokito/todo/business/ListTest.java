@@ -5,6 +5,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.ArgumentMatchers.anyInt;
+import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
@@ -12,6 +13,7 @@ import java.util.List;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.mockito.BDDMockito;
 import org.mockito.Mockito;
 
 
@@ -58,7 +60,7 @@ public class ListTest {
         // Given
         List<String> listMock = Mockito.mock(List.class);
         // Argument Matcher
-        when(listMock.get(anyInt())).thenReturn("test"); // 인자값이 어떤 정수든 test 반환
+        given(listMock.get(anyInt())).willReturn("test"); // 인자값이 어떤 정수든 test 반환
 
         // When
         String firstElement = listMock.get(0);
